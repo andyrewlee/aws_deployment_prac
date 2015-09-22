@@ -3,3 +3,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form(action='http://photoalbums-elb-1316642669.us-west-2.elb.amazonaws.com/users/register',method='post')
+    input(type='text',name='username')
+    input(type='text',name='password')
+    input(type='text',name='email')
+    input(type='submit',value='Register')
